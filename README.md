@@ -17,7 +17,6 @@ From the project root:
 
 make up
 
-text
 
 This will:
 
@@ -29,13 +28,11 @@ To see logs:
 
 make logs
 
-text
 
 To stop and clean up:
 
 make down
 
-text
 
 ---
 
@@ -69,7 +66,6 @@ Ingests inbound WhatsApp-like messages exactly once, with HMAC signature validat
 "text": "Hello"
 }
 
-text
 
 - **Behavior**
   - If signature missing/invalid → `401 {"detail":"invalid signature"}`, no DB insert. [file:1]
@@ -112,7 +108,6 @@ Paginated, filterable list of stored messages. [file:1]
 "offset": 0
 }
 
-text
 
 `total` is the total rows matching the filters, ignoring `limit` and `offset`. [file:1]
 
@@ -133,7 +128,6 @@ Returns:
 "last_message_ts": "2025-01-15T10:00:00Z"
 }
 
-text
 
 - `messages_per_sender`: top up to 10 senders, sorted by count desc. [file:1]
 - `first_message_ts` / `last_message_ts`: min/max `ts` or `null` if no messages. [file:1]
